@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator with drop effect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="Calculator">
+            <input type="text" placeholder="0" id="output-display">
+            <button onclick="playWaterDropSound();Clear()"><span class="drop"></span> CL</button>
+            <button onclick="playWaterDropSound();del()"><span class="drop"></span> Del</button>
+            <button onclick="playWaterDropSound();display('%')"><span class="drop"></span> %</button>
+            <button onclick="playWaterDropSound();display('/')"><span class="drop"></span> /</button>
+            <button onclick="playWaterDropSound();display('7')"><span class="drop"></span> 7</button>
+            <button onclick="playWaterDropSound();display('8')"><span class="drop"></span> 8</button>
+            <button onclick="playWaterDropSound();display('9')"><span class="drop"></span> 9</button>
+            <button onclick="playWaterDropSound();display('*')"><span class="drop"></span> *</button>
+            <button onclick="playWaterDropSound();display('4')"><span class="drop"></span> 4</button>
+            <button onclick="playWaterDropSound();display('5')"><span class="drop"></span> 5</button>
+            <button onclick="playWaterDropSound();display('6')"><span class="drop"></span> 6</button>
+            <button onclick="playWaterDropSound();display('-')"><span class="drop"></span> -</button>
+            <button onclick="playWaterDropSound();display('1')"><span class="drop"></span> 1</button>
+            <button onclick="playWaterDropSound();display('2')"><span class="drop"></span> 2</button>
+            <button onclick="playWaterDropSound();display('3')"><span class="drop"></span> 3</button>
+            <button onclick="playWaterDropSound();display('+')"><span class="drop"></span> +</button>
+            <button onclick="playWaterDropSound();display('.')"><span class="drop"></span> .</button>
+            <button onclick="playWaterDropSound();display('0')"><span class="drop"></span> 0</button>
+            <button onclick="playWaterDropSound();Calclulate('=')" class="equal"><span class="drop"></span> =</button>
+        </div>
+    </div>
+    <audio id="waterDropSound" preload="auto">
+        <source src="water_drop.mp3" type="audio/mpeg">
+    </audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>

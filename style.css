@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #eff0f4;
+    box-sizing: border-box;
+}
+
+.container {
+    background-image: url('water.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eff0f4;
+}
+
+.Calculator {
+    padding: 40px 110px;
+    background-color: transparent;
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.05));
+    box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05),
+        15px 25px 10px rgba(0, 0, 0, 0.05),
+        5px 20px 20px rgba(0, 0, 0, 0.05),
+        inset -10px -10px 15px rgba(255, 255, 255, 0.9);
+    border-radius: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 68px);
+    grid-column-gap: 12px;
+    transition: all 0.7s;
+}
+
+.Calculator:hover {
+    border-radius: 50%;
+    background: rgb(237, 253, 251);
+}
+
+input {
+    grid-column: span 4;
+    height: 90px;
+    width: 290px;
+    background: transparent;
+    box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05),
+        15px 25px 10px rgba(0, 0, 0, 0.05),
+        5px 20px 20px rgba(0, 0, 0, 0.05),
+        inset -10px -10px 15px rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 25px;
+    margin: 5px auto;
+    color: rgb(70, 70, 70);
+    font-size: 2.2rem;
+    padding: 12px;
+    text-align: end;
+}
+
+button {
+    transform: translateX(-7px);
+    height: 63px;
+    width: 63px;
+    box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05),
+        15px 25px 10px rgba(0, 0, 0, 0.05),
+        5px 20px 20px rgba(0, 0, 0, 0.05),
+        inset -10px -10px 15px rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 52% 48% 33% 67% / 38% 45% 55% 62%;
+    font-size: 1.4rem;
+    margin: 8px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: #eff0f4;
+}
+
+button:hover {
+    border-radius: 30px;
+    background-color: rgb(157, 255, 240);
+}
+
+.equal {
+    font-size: 2rem;
+    width: 140px;
+    border-radius: 47% 53% 70% 30% / 30% 43% 57% 70%;
+    background-color: #eff0f4;
+    box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05),
+        15px 25px 10px rgba(0, 0, 0, 0.05),
+        5px 20px 20px rgba(0, 0, 0, 0.05),
+        inset -10px -10px 15px rgba(255, 255, 255, 0.7);
+}
+
+.equal:hover {
+    background-color: #e492ff;
+    width: 120px;
+}
+
+/* column one */
+.drop::before {
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    top: 10px;
+    left: 11px;
+    background: #ffff;
+    opacity: 0.9;
+    border-radius: 50%;
+}
+
+.drop::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 22px;
+    left: 8px;
+    background: #ffff;
+    opacity: 0.9;
+    border-radius: 50%;
+}
+
+.neon-button {
+    animation: neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neonGlow {
+    from {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 1), 0 0 20px #e492ff, 0 0 30px #e492ff, 0 0 40px #e492ff, 0 0 50px #e492ff;
+    }
+    to {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 1), 0 0 20px #e492ff, 0 0 30px #e492ff, 0 0 40px #e492ff, 0 0 60px #e492ff;
+    }
+    /* Add neon brightness here */
+    100% {
+        filter: brightness(1.5);
+    }
+}
